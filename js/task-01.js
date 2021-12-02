@@ -81,6 +81,11 @@ import users from '../users.js';
 // Задание 8
 // Массив имен всех пользователей у которых есть друг с указанным именем.
 
+// const getUsersWithFriend = (users, friendName) =>
+//   users
+//     .filter((user) => user.friends.some((friends) => friends === friendName))
+//     .map((user) => user.name);
+
 // const getUsersWithFriend = (users, friendName) => {
 //   const arreyNameFriends = users.reduce(function (userName, user) {
 //     if (
@@ -97,7 +102,7 @@ import users from '../users.js';
 
 // console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, 'Goldie Gentry'));
-// [ 'Elma Head', 'Sheree Anthony' ]
+// ['Elma Head', 'Sheree Anthony'];
 // Задание 9
 // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 
@@ -115,21 +120,19 @@ import users from '../users.js';
 // Задание 10
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
-const getSortedUniqueSkills = (users) => {
-  const skillsUser = users
-    .reduce(function (skil, user) {
-      // if (!skil.includes(...user.skills)) {
-      skil.push(...user.skills);
-      // }
-      return skil;
-    }, [])
-    .sort();
-  // return skillsUser;
-  const filterperley = skillsUser.filter(function (skill, index) {
-    return skillsUser.indexOf(skill) === index;
-  });
-  return filterperley;
-};
+// const getSortedUniqueSkills = (users) => {
+//   const skillsUser = users
+//     .reduce(function (skil, user) {
+//       skil.push(...user.skills);
+//       return skil;
+//     }, [])
+//     .sort();
 
-console.log(getSortedUniqueSkills(users));
+//   const filterperley = skillsUser.filter(function (skill, index) {
+//     return skillsUser.indexOf(skill) === index;
+//   });
+//   return filterperley;
+// };
+
+// console.log(getSortedUniqueSkills(users));
 // // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
